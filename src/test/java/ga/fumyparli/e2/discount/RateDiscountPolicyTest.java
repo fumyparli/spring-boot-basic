@@ -2,9 +2,10 @@ package ga.fumyparli.e2.discount;
 
 import ga.fumyparli.e2.member.Grade;
 import ga.fumyparli.e2.member.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class RateDiscountPolicyTest {
 
@@ -17,7 +18,7 @@ class RateDiscountPolicyTest {
 
         int discount = discountPolicy.discount(member, 12000);
 
-        Assertions.assertThat(discount).isEqualTo(1200);
+        assertThat(discount).isEqualTo(1200);
     }
 
     @Test
@@ -27,6 +28,6 @@ class RateDiscountPolicyTest {
 
         int discount = discountPolicy.discount(member, 12000);
 
-        Assertions.assertThat(discount).isEqualTo(1200);
+        assertThat(discount).isEqualTo(1200);
     }
 }
